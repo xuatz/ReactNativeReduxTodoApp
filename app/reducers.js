@@ -13,6 +13,17 @@ function visibilityFilter(state = SHOW_ALL, action) {
 
 function todos(state = [], action) {
   switch (action.type) {
+    case COMPLETE_TODO:
+      return state.map(t =>
+        if (t.id !== action.id) {
+          return t;
+        }
+
+        return Object.assign({}, t, {
+          completed: !state.completed
+        });
+      )
+
     case ADD_TODO:
       return [
         ...state,
@@ -21,14 +32,7 @@ function todos(state = [], action) {
           completed: false
         }
       ]
-    case COMPLETE_TODO:
-      return [
-        ...state.slice(0, action.index),
-        Object.assign({}, state[action.index], {
-          completed: true
-        }),
-        ...state.slice(action.index + 1)
-      ]
+    
     default:
       return state
   }
