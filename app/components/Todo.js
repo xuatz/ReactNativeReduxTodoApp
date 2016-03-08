@@ -9,7 +9,7 @@ let Todo = React.createClass({
           textDecorationLine: this.props.completed ? 'line-through' : 'none'
         }}
       >
-        {this.props.text}
+        {this.props.text} + {this.props.completed} + 'heee'
       </Text>
     );
   }
