@@ -12,48 +12,30 @@ function visibilityFilter(state = SHOW_ALL, action) {
    }
 }
 
+let count = 0;
 function todos(state = [], action) {
    switch (action.type) {
       case COMPLETE_TODO:
-         console.log(state);
-
-         return _.map(state, function(t) {
-            console.log(t);
-
-            console.log('t.id: ' + t.id);
-            console.log('action.id: ' + action.id);
-
-
+         return _.map(state, function(t, index) {
             if (t.id !== action.id) {
-               console.log('this is not the task we are looking for');
                return t;
             }
 
-            console.log('flipping in progress');
             return Object.assign({}, t, {
                completed: !state.completed
             });
          });
-
-
-         // state.map(t =>
-
-         //)
-         // return [
-         //    ...state.slice(0, action.index),
-         //    Object.assign({}, state[action.index], {
-         //       completed: true
-         //    }),
-         //    ...state.slice(action.index + 1)
-         // ]
       case ADD_TODO:
-         return [
+         let res = [
             ...state,
             {
+               id: count++,
                text: action.text,
                completed: false
             }
-         ]
+         ];
+         console.log(res);
+         return res;
       default:
          return state
    }
