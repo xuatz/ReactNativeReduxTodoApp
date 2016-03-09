@@ -7,7 +7,7 @@ This is React Native version of Redux tutorial(http://rackt.org/redux/docs/basic
 ```
 npm install  
 react-native run-android  
-have android emulator or device plugged in  
+(have android emulator or device plugged in)  
 ./adb reverse tcp:8081 tcp:8081 (likely required for physical android device)  
 ```
 
