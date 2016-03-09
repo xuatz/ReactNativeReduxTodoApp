@@ -9,6 +9,8 @@ npm install
 react-native run-android  
 (have android emulator or device plugged in)  
 ./adb reverse tcp:8081 tcp:8081 (likely required for physical android device)  
+(shake android device or press menu)
+(select 'reload JS')
 ```
 
 ## Future Implementations
