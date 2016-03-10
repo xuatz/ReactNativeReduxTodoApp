@@ -5,7 +5,7 @@ let Todo = React.createClass({
       return(
          <Text onPress={this.props.onClick}
             style={this.props.completed ? styles.active : styles.completed}>
-            {this.props.text} + {this.props.completed} + 'heee'
+            {this.props.text}
          </Text>
       );
    }
@@ -20,13 +20,13 @@ var styles = StyleSheet.create({
       fontWeight: 'bold',
       textDecorationLine: 'line-through'
    },
-   base: {
-      width: 38,
-      height: 38,
-   },
-   background: {
-      backgroundColor: '#222222',
-   },
+   // base: {
+   //    width: 38,
+   //    height: 38,
+   // },
+   // background: {
+   //    backgroundColor: '#222222',
+   // },
 });
 
 Todo.propTypes = {

@@ -64,9 +64,10 @@ var styles = StyleSheet.create({
 });
 
 ReactNativeReduxTodoApp.propTypes = {
-  visibleTodos: React.PropTypes.arrayOf(React.PropTypes.shape({
-    text: React.PropTypes.string.isRequired,
-    completed: React.PropTypes.bool.isRequired
+  visibleTodos: React.PropTypes.arrayOf(
+    React.PropTypes.shape({
+      text: React.PropTypes.string.isRequired,
+      completed: React.PropTypes.bool.isRequired
   })),
   visibilityFilter: React.PropTypes.oneOf([
     'SHOW_ALL',
