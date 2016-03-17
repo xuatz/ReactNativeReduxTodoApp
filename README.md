@@ -18,7 +18,5 @@ react-native run-android
 
 ## Future Implementations
 1. Able to toggle todo between 'active' and 'completed
-2. Persistent data storage
-3. Accounts system
-4. Cloud data sync
-5. UI improvement
+1. Persistent data storage
+1. Improve UI
